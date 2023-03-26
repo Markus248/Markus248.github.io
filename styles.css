@@ -1,0 +1,157 @@
+*{
+    font-family: sans-serif;  
+    text-align: justify;
+    
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "header header header"
+                         "nav main aside"
+                         "footer footer footer";
+}
+/*Kopfbereich*/
+header{
+    grid-area: header;
+    border-bottom: 1px solid black;  
+}
+label{
+    margin: 0;
+    float: right;
+}
+h1{
+    margin-top: 40px;
+    margin-bottom: 0;
+    float: left;
+    font-size: 4em;
+}
+ul{
+    font-size: 2em;
+    background-color: white;
+    margin: 0;
+    display: none;
+}
+#click:checked ~ ul {display:block;}
+#click {display:none;}
+
+#click:checked ~ label .zweiham{opacity:0;}
+#click:checked ~ label .einsham{transform:rotate(-45deg); top:40px; transition: transform 0.5s;}
+#click:checked ~ label .dreiham{transform:rotate(45deg); top:40px; transition: transform 0.5s;}
+.linie{
+    width: 80px;
+    height: 8px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+}
+.einsham{
+    top: 16px;
+}
+.zweiham{
+    top: 40px;
+}              
+.dreiham{
+    top:64px;
+}
+.rahmen{
+    width: 80px;
+    height: 88px;
+    background-color: #1D62BB;
+    border-radius: 4px;
+    margin-top: 11px;
+    margin-right: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+#h{
+    color: #C3421B;
+}
+#tml{
+    color: #D26820;
+}
+#c{
+    color: #1D62BB;
+}
+#ss{
+    color: #1D7EBB;
+}
+/*Navigationsbereich*/
+nav{
+    
+    grid-area: nav;
+    min-width: 200px;
+}
+.link{
+    font-size: 1.1rem;
+}
+ul{
+    width: 200px;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 70%;
+    float: right;
+    list-style-type: none;
+}
+li{
+    margin: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+a:hover{
+    color: #1D62BB;
+}
+
+/*Hauptteil*/
+main{
+    border: 1px solid black;
+    border-top-style: none;
+    border-bottom-style: none;
+    padding: 10px;
+    grid-area: main;
+    display: grid;
+}
+h2{
+    text-align: center;
+}
+#dummy_bild1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 37.5em;
+    color: #323232;
+}
+/*Nebenbereich*/
+aside{
+    grid-area: aside;
+}
+/*Fußbereich*/
+footer{
+    height: 50px;
+    grid-area: footer;
+    border-top: 1px solid black;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "up impressum"
+}
+#impressum{
+    grid-area: impressum;
+    display: grid; 
+    justify-content: center; 
+    align-items: center;
+    
+}
+#up{
+    grid-area: up;
+    display: grid; 
+    justify-content: center; 
+    align-items: center;
+}
