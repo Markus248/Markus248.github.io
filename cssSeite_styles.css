@@ -9,7 +9,7 @@ body{
     grid-gap: 10px;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "header header header"
-                         "nav main aside"
+                         "aside1 main aside2"
                          "footer footer footer";
 }
 /*Kopfbereich*/
@@ -80,10 +80,10 @@ ul{
 #ss{
     color: #1D7EBB;
 }
-/*Navigationsbereich*/
-nav{
+/*Nebenbereich 1*/
+#aside1{
     
-    grid-area: nav;
+    grid-area: aside1;
     min-width: 200px;
 }
 .link{
@@ -157,10 +157,10 @@ td{
 th{
     background-color: silver;
 }
-/*Nebenbereich*/
-aside{
+/*Nebenbereich 2*/
+#aside2{
     
-    grid-area: aside;
+    grid-area: aside2;
 }
 /*Fußbereich*/
 footer{
