@@ -1,157 +1,95 @@
-*{
-    font-family: sans-serif;  
-    text-align: justify;
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_htmlSeite.css">
+    <title>Projektseite</title>
+</head>
+<body>
+    <header id="sprungmarke">
+        <h1><span id="h">H</span><span id="tml">TML</span> // <span id="c">C</span><span id="ss">SS</span></h1>
+        
+        <input type="checkbox" id="click">
+        <label for="click">
+            <div class="rahmen">
+                <div class="linie einsham"></div>    
+                <div class="linie zweiham"></div>
+                <div class="linie dreiham"></div>
+            </div>
+        </label>
+        <ul>
+            <li> <a class="link" href="index.html">Startseite</a></li>
+            <li><a class="link" href="htmlSeite.html">HTML</a></li>
+            <li><a class="link" href="cssSeite.html">CSS</a></li>
+            <li><a class="link" href="https://codingbat.com/java" target="_blank">CodingBat</a></li>
+        </ul> 
     
-}
-body{
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "header header header"
-                         "aside1 main aside2"
-                         "footer footer footer";
-}
-/*Kopfbereich*/
-header{
-    grid-area: header;
-    border-bottom: 1px solid black;  
-}
-label{
-    margin: 0;
-    float: right;
-}
-h1{
-    margin-top: 40px;
-    margin-bottom: 0;
-    float: left;
-    font-size: 4em;
-}
-ul{
-    font-size: 2em;
-    background-color: white;
-    margin: 0;
-    display: none;
-}
-#click:checked ~ ul {display:block;}
-#click {display:none;}
+    </header>
+    <aside id="aside1"></aside>
+    <main>
+        <article id="artikel1">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <br><br><br>
+            
+            <figure id="liegende_frau">
+                <img src="websiteplanet-dummy-180X180.png" alt="Aufnahme einer auf dem Rücken liegenden Frau auf Gras mit geschlossenen Augen und Wildblumen" title="liegende Frau">
+            </figure>
+            
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                <br><br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <br><br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. 
+                <br><br><br>
+                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat
+                <br><br><br>
 
-#click:checked ~ label .zweiham{opacity:0;}
-#click:checked ~ label .einsham{transform:rotate(-45deg); top:40px; transition: transform 0.5s;}
-#click:checked ~ label .dreiham{transform:rotate(45deg); top:40px; transition: transform 0.5s;}
-.linie{
-    width: 80px;
-    height: 8px;
-    background-color: white;
-    border-radius: 4px;
-    position: absolute;
-}
-.einsham{
-    top: 16px;
-}
-.zweiham{
-    top: 40px;
-}              
-.dreiham{
-    top:64px;
-}
-.rahmen{
-    width: 80px;
-    height: 88px;
-    background-color: #1D62BB;
-    border-radius: 4px;
-    margin-top: 11px;
-    margin-right: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative;
-}
-
-#h{
-    color: #C3421B;
-}
-#tml{
-    color: #D26820;
-}
-#c{
-    color: #1D62BB;
-}
-#ss{
-    color: #1D7EBB;
-}
-/*Nebenbereich 1*/
-#aside1{
-    
-    grid-area: aside1;
-    min-width: 200px;
-}
-.link{
-    font-size: 1.1rem;
-}
-ul{
-    width: 200px;
-    position: absolute;
-    margin-top: 10%;
-    margin-left: 70%;
-    float: right;
-    list-style-type: none;
-}
-li{
-    margin: 10%;
-}
-
-a{
-    text-decoration: none;
-    color: black
-}
-a:hover{
-    color: #1D62BB;
-}
-
-/*Hauptteil*/
-main{
-    border: 1px solid black;
-    border-top-style: none;
-    border-bottom-style: none;
-    padding: 10px;
-    grid-area: main;
-    display: grid;
-}
-h2{
-    text-align: center;
-}
-#dummy_bild1{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 37.5em;
-    color: #323232;
-}
-/*Nebenbereich2*/
-#aside2{
-    grid-area: aside2;
-}
-/*Fußbereich*/
-footer{
-    height: 50px;
-    grid-area: footer;
-    border-top: 1px solid black;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "up impressum"
-}
-#impressum{
-    grid-area: impressum;
-    display: grid; 
-    justify-content: center; 
-    align-items: center;
-    
-}
-#up{
-    grid-area: up;
-    display: grid; 
-    justify-content: center; 
-    align-items: center;
-}
+                <figure id="html_markup">
+                    <a href="html_photo.html" target="_blank"><img src="Screenshot_HTML.png" alt="HTML Auszeichnung" width="600" title="HTML Auszeichnung in VS Code"></a>
+                    <figcaption>HTML Auszeichnung in VS Code</figcaption>  
+                </figure>
+                
+                <br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <br><br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren
+                <br><br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                labore et dolore magna aliquyam erat
+            </p>    
+    </main>
+    <aside id="aside2"></aside>
+    <footer>
+        
+            <a id="impressum" href="https://de.wikipedia.org/wiki/Impressum" target="_blank">impressum</a>
+            <a id="up" href="#sprungmarke">nach oben</a>
+       
+    </footer>
+</body>
+</html>
