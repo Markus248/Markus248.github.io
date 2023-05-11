@@ -1,94 +1,157 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Projektseite</title>
-</head>
-<body>
-    <header id="sprungmarke">
-        <h1><span id="h">H</span><span id="tml">TML</span> // <span id="c">C</span><span id="ss">SS</span></h1>
-        
-        <input type="checkbox" id="click">
-        <label for="click">
-            <div class="rahmen">
-                <div class="linie einsham"></div>    
-                <div class="linie zweiham"></div>
-                <div class="linie dreiham"></div>
-            </div>
-        </label>
-        <ul>
-            <li> <a class="link" href="index.html">Startseite</a></li>
-            <li><a class="link" href="htmlSeite.html">HTML</a></li>
-            <li><a class="link" href="cssSeite.html">CSS</a></li>
-            <li><a class="link" href="https://codingbat.com/java" target="_blank">Coding Bat</a></li>
-        </ul> 
+*{
+    font-family: sans-serif;  
+    text-align: justify;
     
-    </header>
-    <aside id="aside1">
-    </aside>
-    <main>
-        <article id="artikel1">
-            <h2>Projektseite zum Modul HTML / CSS</h2>
-            <br>
-            <h3>Eine kurze Erläuterung</h3>
-            <br>
-            <p>Dies ist meine Projektseite, die im Rahmen meiner Umschulung zum Fachinformatiker in der Fachrichtung 
-                Anwendungsentwicklung in dem Modul HTML/CSS entstanden ist. In diesem Modul haben wir wesentliche 
-                Basistechniken im Umgang mit HTML/CSS kennen gelernt. Die Projektseite dient der Einübung der besprochenen
-                Theorieteile und bildet im Wesentlichen alle besprochenen Inhalte ab. Lediglich der Sandwich Button wurde nicht im Rahmen des 
-                Modules gelehrt, sondern ist aus eigenen Recherchen entstanden. 
-                Ich verwende im Folgenden ausschließlich Dummy Bilder, Dummy Text und Screenshots, da der Fokus auf den Technologien, nicht auf dem Inhalt liegt.
-                <br><br><br>
-                Da ich mich dazu entschlossen habe diese Seite 
-                als Arbeitsprobe verfügbar zu machen, stelle ich auch einen Link zu der Seite CodingBat zur verfügung. Dies ist eine
-                englischsprachige Seite, die in verschiedenen Schwierigkeitsstufen Aufgaben in der Sprache Java zur Vefügung stellt, um das algorithmische Denken einzuüben. 
-                Dort können Sie sehen, wie ich einige dieser Aufgaben in meiner Freizeit gelöst habe. Über meinen Benutzernamen und mein Passwort, 
-                das ich in meiner Bewerbung zur Verfügung stelle, können Sie auf meinen Account zugreifen. 
-                <br><br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren
-                <br><br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat
-                <br><br><br>
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "header header header"
+                         "aside1 main aside2"
+                         "footer footer footer";
+}
+/*Kopfbereich*/
+header{
+    grid-area: header;
+    border-bottom: 1px solid black;  
+}
+label{
+    margin: 0;
+    float: right;
+}
+h1{
+    margin-top: 40px;
+    margin-bottom: 0;
+    float: left;
+    font-size: 4em;
+}
+ul{
+    font-size: 2em;
+    background-color: white;
+    margin: 0;
+    display: none;
+}
+#click:checked ~ ul {display:block;}
+#click {display:none;}
 
-                <figure id="dummy_bild1">
-                    <img src="websiteplanet-dummy-960X600-2.png" alt="Aufnahme einer Straßenszene in einer amerikanischen Großstadt" width="600" title="amerikanische Großstadt">
-                    <figcaption>Amerikanische Großstadtszene</figcaption>
-                </figure>
-                
-                <br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                <br><br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren
-                <br><br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                labore et dolore magna aliquyam erat
-            </p>    
-    </main>
-    <aside id="aside2"></aside>
-    <footer>
-        
-            <a id="impressum" href="https://de.wikipedia.org/wiki/Impressum" target="_blank">impressum</a>
-            <a id="up" href="#sprungmarke">nach oben</a>
-       
-    </footer>
-</body>
-</html>
+#click:checked ~ label .zweiham{opacity:0;}
+#click:checked ~ label .einsham{transform:rotate(-45deg); top:40px; transition: transform 0.5s;}
+#click:checked ~ label .dreiham{transform:rotate(45deg); top:40px; transition: transform 0.5s;}
+.linie{
+    width: 80px;
+    height: 8px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+}
+.einsham{
+    top: 16px;
+}
+.zweiham{
+    top: 40px;
+}              
+.dreiham{
+    top:64px;
+}
+.rahmen{
+    width: 80px;
+    height: 88px;
+    background-color: #1D62BB;
+    border-radius: 4px;
+    margin-top: 11px;
+    margin-right: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+#h{
+    color: #C3421B;
+}
+#tml{
+    color: #D26820;
+}
+#c{
+    color: #1D62BB;
+}
+#ss{
+    color: #1D7EBB;
+}
+/*Nebenbereich 1*/
+#aside1{
+    
+    grid-area: aside1;
+    min-width: 200px;
+}
+.link{
+    font-size: 1.1rem;
+}
+ul{
+    width: 200px;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 70%;
+    float: right;
+    list-style-type: none;
+}
+li{
+    margin: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+a:hover{
+    color: #1D62BB;
+}
+
+/*Hauptteil*/
+main{
+    border: 1px solid black;
+    border-top-style: none;
+    border-bottom-style: none;
+    padding: 10px;
+    grid-area: main;
+    display: grid;
+}
+h2{
+    text-align: center;
+}
+#dummy_bild1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 37.5em;
+    color: #323232;
+}
+/*Nebenbereich2*/
+#aside2{
+    grid-area: aside2;
+}
+/*Fußbereich*/
+footer{
+    height: 50px;
+    grid-area: footer;
+    border-top: 1px solid black;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "up impressum"
+}
+#impressum{
+    grid-area: impressum;
+    display: grid; 
+    justify-content: center; 
+    align-items: center;
+    
+}
+#up{
+    grid-area: up;
+    display: grid; 
+    justify-content: center; 
+    align-items: center;
+}
